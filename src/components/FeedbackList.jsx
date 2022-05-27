@@ -1,5 +1,6 @@
 import React from 'react'
 import FeedbackItem from "./FeedbackItem";
+import PropTypes from 'prop-types'
 
 
 function FeedbackList({feedbacks}) {
@@ -14,6 +15,10 @@ function FeedbackList({feedbacks}) {
       ))}
     </div>
   )
+}
+
+FeedbackList.propTypes = {
+  feedbacks: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default FeedbackList
