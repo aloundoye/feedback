@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
 import FeedbackData from "./data/FeedbackData";
+import FeedbackStats from "./components/FeedbackStats";
 import React, { useState } from "react";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
     <>
       <Header />
       <div className="container">
+        <FeedbackStats feedbacks={feedbacks}/>
         <FeedbackList feedbacks={feedbacks} handleDelete={deleteFeedback} />
       </div>
     </>
